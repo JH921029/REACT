@@ -12,7 +12,7 @@ function EventComponent(){
   const handleChange = (e) => {
     // console.log(e.target.name);
     // console.log(e.target.value);
-    const copy = {...form,[e.target.name] : e.target.value};//객체 복사
+    const copy = {...form,[e.target.name] : e.target.value};//spread 문법으로 객체 복사
     setForm(copy);
     console.log(copy);
 

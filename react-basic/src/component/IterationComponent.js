@@ -24,12 +24,14 @@ function IterationComponent(){
   const result = arr.map((item,index)=><li key={index}>{item}</li>)
   console.log(result);
 
+
+
   const list = [{id: 1, title: 'aaa123'},
                 {id: 2, title: 'bbb123'},
                 {id: 3, title: 'ccc123'},
               ]
 
-  const result2 = list.map((item,index)=><option key={index}>{item.title}</option>)
+  const result2 = list.map((item)=><option key={item.id}>{item.title}</option>)
 
   return(
     <div>
