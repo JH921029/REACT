@@ -16,7 +16,7 @@ function HookEffect () {
   //첫번째 마운트 이후에만 실행됩니다.
   // useEffect(() => {
   //   console.log('첫번째 마운트 이후에만 실행됩니다')
-  // },[]);
+  // },[]); 빈 배열 하나 넣으면 한번만 실행
 
   //특정 값이 업데이트 될때 실행됩니다.
   useEffect(() =>{
@@ -24,7 +24,7 @@ function HookEffect () {
 
     return () => {
       console.log('unmount될 때 실행됩니다.')
-      console.log(`${name}`)
+      console.log(`인풋의 값이 바뀌기 직전값 : ${name}`)//state가 ab로 변경할 때 a가 출력
     }
 
   },[name, age])

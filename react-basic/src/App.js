@@ -1,36 +1,25 @@
 import { Fragment } from "react"
-import {useState} from "react";
-import HookEffect from "./hook/HookEffect"
-import HookRef from "./hook/HookRef";
-import HookQ from "./hook/HookQ";
-import HookReducer from "./hook/HookReducer";
+
+import './css/App.css';
+import x from './css/App.module.css'
 
 
 function App(){
-  //보이기 숨기기 - unmount값 확인
-  const [visible, setVisible] = useState(true);
 
-  const handleVisible = () =>{
-    setVisible(!visible);
-  }
-  console.log(visible);
+  console.log(x);
   return(
     <Fragment>
-      <button onClick={handleVisible}>{visible ? '숨기기' : '보이기'}</button>
-      {visible ? <HookEffect/> : null}
+      <header className="app_header">
+        <p style={{color: 'red', textAlign: 'center'}}>안녕하세요</p>
+      </header>
 
-      <hr/>
-      <HookRef/>
-
-      <hr/>
-      <HookQ/>
-
-      <hr/>
-      <HookReducer/>
-
+      <section className={x.wrap}>
+        <div className={x.item}>
+          <p className="inner">CSS모듈</p>
+          <input type="text" className="input-control" />
+        </div>
+      </section>
     </Fragment>
-    
-  )
+    )
 }
- 
 export default App
