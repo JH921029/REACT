@@ -1,0 +1,26 @@
+import { createContext, useState } from "react";
+
+//1.
+const UserContext = createContext({
+  state: { id: '초기값', name: '초기값' },
+  action: {
+    setUser: () => { }
+  }
+})
+
+
+//2.Provider함수 선언 반드시 children이어야함
+const UserProvider = ({ children }) => {
+  const [user, setUser] = useState({ id: 'aaa', name: '홍길동' });
+  const value = {
+    state: user,
+    action: { setUser }
+  }
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
+}
+
+
+//3. Consumer함수 변환
+const UserConsumer = UserContext.Consumer;
+export { UserProvider, UserConsumer };//이건 여러개여도 됨
+export default UserContext;//이건 반드시 하나
