@@ -5,6 +5,7 @@ import HookRef from "./hook/HookRef";
 import HookQ from "./hook/HookQ";
 import HookReducer from "./hook/HookReducer";
 import IterationComponentQ2 from "./component/IterationComponentQ2";
+import Login from "./component/Login";
 
 
 function App(){
@@ -31,6 +32,9 @@ function App(){
 
       <hr/>
       <IterationComponentQ2/>
+
+      <hr/>
+      <Login/>
 
     </Fragment>
     
